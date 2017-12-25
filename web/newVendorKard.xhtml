@@ -1,0 +1,59 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Simplex
+  Date: 06.11.2017
+  Time: 10:09
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>newVendorKard</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div id="newVendor">
+    <header>
+        <h2 align="center">ЧП "РИО" </h2>
+    </header>
+
+    <main>
+        <form>
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td><input type="text" readonly size="25" name="idVendor"></td>
+                </tr>
+                <tr>
+                    <td>Наименование</td>
+                    <td><input type="text" size="60" name="vendorName"></td>
+                </tr>
+                <tr>
+                    <td>Адрес</td>
+                    <td><input type="text" size="60" name="vendorAdres"></td>
+                </tr>
+                <tr>
+                    <td>Номер телефона</td>
+                    <td><input type="tel" size="25" name="vendorPhoneNumber"></td>
+                </tr>
+                <tr>
+                    <td>e-mail</td>
+                    <td><input type="email" size="25" name="vendorEmail"></td>
+                </tr>
+                <tr>
+                    <td>Прайс лист</td>
+                    <td><input type="file" placeholder="Прайс Лист" name="vendorPriceList"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+    </main>
+
+    <footer>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
+            11-28-98</p>
+    </footer>
+</div>
+</body>
+</html>

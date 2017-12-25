@@ -1,0 +1,57 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Simplex
+  Date: 06.11.2017
+  Time: 9:29
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>vendor</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div id="vendor">
+    <header>
+        <h2 align="center">ЧП "РИО" </h2>
+        <form align="right"><input type="search" placeholder="ПОИСК" size="40"></form>
+        <h3 align="center">База поставщиков</h3>
+    </header>
+
+    <main>
+        <table border="1" width="100%">
+            <tr align="center" class="tableHeader">
+                <td width="5%" class="tableHeader">ID</td>
+                <td class="tableHeader">Наименование</td>
+                <td width="25%" class="tableHeader">Адрес</td>
+                <td width="10%" class="tableHeader">Номер телефона</td>
+                <td width="10%" class="tableHeader">e-mail</td>
+                <td width="15%" class="tableHeader">Прайс лист</td>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+        </table>
+        <a href="newVendorKard.html" target="_blank"
+           onclick="window.open(this.href,'description',' width=600,height=390, top=300, left=500,resizable=no, scrollbars=yes');return false;">
+            <button>Добавить нового поставщика</button>
+        </a>
+        <a href="home.html">
+            <button>Вернуться в главное меню</button>
+        </a>
+    </main>
+
+    <footer>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
+            11-28-98</p>
+    </footer>
+</div>
+</body>
+</html>

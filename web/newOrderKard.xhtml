@@ -1,0 +1,103 @@
+<%--
+Created by IntelliJ IDEA.
+User: Artyom
+Date: 03.11.2017
+Time: 23:58
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>newOrderKard</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+<div id="newOrder">
+    <header>
+        <h2 align="center">ЧП "РИО" </h2>
+    </header>
+
+    <main>
+        <h3 align="center">Карточка заказа</h3>
+        <form>
+            <table class="orderCard">
+                <tr>
+                    <td class="orderCard">ID заказа</td>
+                    <td class="orderCard"><input type="text" readonly name="idOrder"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Клиент</td>
+                    <td class="orderCard"><input type="text" placeholder="ФИО и ID" required size="50" name="client">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Наименование</td>
+                    <td class="orderCard"><input type="text" name="nameOrder" list="nameOrder"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Срок выполнения</td>
+                    <td class="orderCard"><input type="date" required name="deadLine"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Себестоимость</td>
+                    <td class="orderCard"><input type="text" name="costPrice"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Стоимость</td>
+                    <td class="orderCard"><input type="text" name="value"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Адрес заказа</td>
+                    <td class="orderCard"><input type="text" required size="50" name="adresOrder"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Замер</td>
+                    <td class="orderCard"><input type="file" multiple name="measurement"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Дизайн модель</td>
+                    <td class="orderCard"><input type="file" multiple name="designModel"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Технологическая документация</td>
+                    <td class="orderCard"><input type="file" multiple name="TechnologicalDocumentation"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Фото заказа</td>
+                    <td class="orderCard"><input type="file" accept="image/*" multiple name="fotoOrder"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Исполнитель</td>
+                    <td class="orderCard"><input type="text" placeholder="ФИО и ID исполнителя" name="collector"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Дата сдачи заказа</td>
+                    <td class="orderCard"><input type="date" name="dateDelivery"></td>
+                </tr>
+                <tr>
+                    <td class="orderCard">Примечание</td>
+                    <td class="orderCard"><textarea name="note" cols="50" rows="10" wrap="soft"></textarea></td>
+                </tr>
+            </table>
+            <input type="submit">
+            <datalist id="nameOrder">
+                <option value="Кухня">
+                <option value="Детская">
+                <option value="Прихожая">
+                <option value="Шкаф купе">
+                <option value="Стол">
+                <option value="Стол компьютерный">
+                <option value="Горка">
+                <option value="Кровать">
+            </datalist>
+        </form>
+    </main>
+    <footer>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
+            11-28-98</p>
+    </footer>
+</div>
+</body>
+</html>

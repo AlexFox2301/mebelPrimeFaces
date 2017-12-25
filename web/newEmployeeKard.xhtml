@@ -1,0 +1,80 @@
+<%--
+Created by IntelliJ IDEA.
+User: Artyom
+Date: 05.11.2017
+Time: 15:41
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>employeeKard</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+<div id="newEmployee">
+    <header>
+        <h2 align="center">ЧП "РИО" </h2>
+    </header>
+
+    <main>
+        <form>
+            <table width="100%" cellspacing="10" cellpadding="5">
+                <tr>
+                    <td rowspan="8" width="30%" align="center"><img src="foto/......img" alt="Фото сотрудника"
+                                                                    width="240">
+                    </td>
+                    <td width="20%">ID</td>
+                    <td><input type="text" readonly name="idEmployee"></td>
+                </tr>
+                <tr>
+                    <td>Фамилия</td>
+                    <td><input type="text" name="lastName" size="70"></td>
+                </tr>
+                <tr>
+                    <td>Имя</td>
+                    <td><input type="text" name="firstName" size="70"></td>
+                </tr>
+                <tr>
+                    <td>Отчество</td>
+                    <td><input type="text" name="fatherName" size="70"></td>
+                </tr>
+                <tr>
+                    <td>Адрес</td>
+                    <td><input type="text" name="homeAdres" size="70"></td>
+                </tr>
+                <tr>
+                    <td>номер телефона</td>
+                    <td><input type="tel" name="phoneNumber" size="70"></td>
+                </tr>
+                <tr>
+                    <td>e-mail</td>
+                    <td><input type="email" name="email" size="70"></td>
+                </tr>
+                <tr>
+                    <td>Должность</td>
+                    <td><input type="text" name="cost" list="cost" size="70"></td>
+                </tr>
+            </table>
+            <datalist id="cost">
+                <option value="Директор">
+                <option value="Водитель">
+                <option value="Дизайнер">
+                <option value="Технолог">
+                <option value="Агент снабжения">
+                <option value="Сборщик">
+            </datalist>
+            <input type="submit">
+        </form>
+    </main>
+
+    <footer>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
+            11-28-98</p>
+    </footer>
+</div>
+</body>
+</html>

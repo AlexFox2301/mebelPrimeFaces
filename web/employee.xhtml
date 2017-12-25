@@ -1,0 +1,70 @@
+<%--
+Created by IntelliJ IDEA.
+User: Artyom
+Date: 03.11.2017
+Time: 22:12
+To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>employee</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div id="employee">
+    <header>
+        <h2 align="center">ЧП "РИО" </h2>
+    </header>
+    <main>
+        <form align="right"><input type="search" placeholder="ПОИСК" size="40"></form>
+        <h3 align="center">Сотрудники</h3>
+
+        <table width=100% border="1">
+            <tr align="center" class="tableHeader">
+                <td width="5%" class="tableHeader">ID</td>
+                <td width="15%" class="tableHeader">Фамилия</td>
+                <td width="10%" class="tableHeader">Имя</td>
+                <td width="15%" class="tableHeader">Отчество</td>
+                <td class="tableHeader">Домашний адрес</td>
+                <td width="10%" class="tableHeader">Номер телефона</td>
+                <td width="10%" class="tableHeader">e-mail</td>
+                <td width="10%" class="tableHeader">Должность</td>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <a href="newEmployeeKard.html" target="_blank"
+           onclick="window.open(this.href,'description',' width=1000,height=550, top=300, left=500,resizable=no, scrollbars=yes');return false;">
+            <button>Добавить нового сотрудника</button>
+        </a>
+        <a href="home.html">
+            <button>Вернуться в главное меню</button>
+        </a>
+    </main>
+    <footer>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
+            11-28-98</p>
+    </footer>
+</div>
+</body>
+</html>
