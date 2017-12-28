@@ -8,7 +8,7 @@ import java.util.Collection;
 @Entity
 public class Client {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Basic
     private String clientLastName;

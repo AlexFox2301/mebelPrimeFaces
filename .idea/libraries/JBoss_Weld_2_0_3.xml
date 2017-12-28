@@ -2,14 +2,14 @@
   <library name="JBoss Weld-2.0.3" type="CDI">
     <properties version="2.0.3" />
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/weld-api.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/cdi-api.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/weld-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/weld-api.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/weld-core-impl.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/weld-se.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/weld-core-jsf.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/weld-se-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/weld-se.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/weld-servlet.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/weld-se-core.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/weld-servlet-core.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/weld-spi.jar!/" />
     </CLASSES>

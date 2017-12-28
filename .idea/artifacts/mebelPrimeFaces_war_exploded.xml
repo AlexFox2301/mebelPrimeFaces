@@ -12,8 +12,10 @@
           <element id="library" level="project" name="eclipselink-2.6.2" />
           <element id="library" level="project" name="jstl-1.2" />
           <element id="library" level="project" name="Java EE 6-Java EE 6" />
-          <element id="library" level="project" name="JBoss Weld-2.0.3" />
           <element id="library" level="project" name="Mojarra-1.2" />
+          <element id="library" level="project" name="javax.persistence" />
+          <element id="library" level="project" name="javax.faces-api-2.2" />
+          <element id="library" level="project" name="JBoss Weld-2.0.3" />
         </element>
       </element>
     </root>

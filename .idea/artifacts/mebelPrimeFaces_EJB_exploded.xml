@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="mebelPrimeFaces:EJB exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/mebelPrimeFaces_EJB_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="mebelPrimeFaces/ejb/EJB" />
+      <element id="module-output" name="mebelPrimeFaces" />
+    </root>
+  </artifact>
+</component>
