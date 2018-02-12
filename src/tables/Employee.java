@@ -1,4 +1,4 @@
-package tables.employee;
+package tables;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

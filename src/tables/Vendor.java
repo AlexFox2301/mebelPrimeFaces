@@ -1,4 +1,4 @@
-package tables.vendor;
+package tables;
 
 //import vendor.PriceList;
 

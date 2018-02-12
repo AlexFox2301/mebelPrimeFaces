@@ -2,7 +2,7 @@ package beans;
 
 
 import DAO.ClientDAO;
-import tables.client.Client;
+import tables.Client;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;

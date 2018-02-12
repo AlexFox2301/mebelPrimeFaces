@@ -1,7 +1,7 @@
-package tables.order;
+package tables;
 
 
-import tables.client.Client;
+import tables.Client;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -153,4 +153,6 @@ public class Order {
     public void setFoto(String foto) {
         this.foto = foto;
     }
+
+
 }

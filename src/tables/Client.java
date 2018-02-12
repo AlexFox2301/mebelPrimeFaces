@@ -1,8 +1,6 @@
-package tables.client;
+package tables;
 
 
-
-import tables.order.Order;
 
 import javax.persistence.*;
 import java.util.Collection;

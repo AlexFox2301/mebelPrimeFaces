@@ -1,6 +1,4 @@
-package tables.storage;
-
-import tables.vendor.Vendor;
+package tables;
 
 import javax.persistence.*;
 
