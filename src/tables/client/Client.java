@@ -1,9 +1,12 @@
 package tables.client;
 
+
+
 import tables.order.Order;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.Date;
 
 @Entity
 public class Client {
@@ -20,6 +23,8 @@ public class Client {
     private String adressHome;
     @Basic
     private String clientPhoneNumder;
+    @Basic
+    private Date dateRegistration;
 
     @OneToMany(mappedBy = "client")
     private Collection<Order> orders;
@@ -77,7 +82,9 @@ public class Client {
         return clientPhoneNumder;
     }
 
-
+    public void setClientLastName(String clientLastName) {
+        this.clientLastName = clientLastName;
+    }
 
     public Integer getId() {
         return id;
@@ -95,5 +102,27 @@ public class Client {
         this.orders = orders;
     }
 
+    public void setClientFirstName(String clientFirstName) {
+        this.clientFirstName = clientFirstName;
+    }
 
+    public void setClientFatherName(String clientFatherName) {
+        this.clientFatherName = clientFatherName;
+    }
+
+    public void setAdressHome(String adressHome) {
+        this.adressHome = adressHome;
+    }
+
+    public void setClientPhoneNumder(String clientPhoneNumder) {
+        this.clientPhoneNumder = clientPhoneNumder;
+    }
+
+    public Date getDateRegistration() {
+        return dateRegistration;
+    }
+
+    public void setDateRegistration(Date dateRegistration) {
+        this.dateRegistration = dateRegistration;
+    }
 }
