@@ -1,19 +1,22 @@
 package tables;
 
 
-import tables.Client;
-
 import javax.persistence.*;
 import java.util.Date;
+
 
 //ЗАКАЗ
 @Entity
 public class Order {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private enum confirmation {confirmed, canceled};
+    private enum state {delivered, not_delivered};
+
+
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
-    private Client client;
+    private Client client;                                  //Клиент
     @Basic
     private String orderName;                               //наименование заказа
     @Basic
@@ -30,6 +33,12 @@ public class Order {
     private String designModel;                            //дизайн модель ссылка на место хранения
     @Basic
     private String techDoc;                                //технологическая документация ссылка на место хранения
+    private enum confirmation {confirmed, canceled};       //Подтверждение (подтвержден / отменен)
+    private enum state {delivered, not_delivered};         //Статус (сдан / не сдан)
+    @Basic
+    private String employee;                                //исполнитель
+    @Basic
+    private Date actualDateOfDelivery;                      //Фактическая дата здачи заказа
     @Basic
     private String foto;                                    //фото ссылка на место хранения
     @Basic

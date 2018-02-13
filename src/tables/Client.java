@@ -12,17 +12,17 @@ public class Client {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Basic
-    private String clientLastName;
+    private String clientLastName;          //Фамилия
     @Basic
-    private String clientFirstName;
+    private String clientFirstName;         //Имя
     @Basic
-    private String clientFatherName;
+    private String clientFatherName;        //Отчество
     @Basic
-    private String adressHome;
+    private String adressHome;              //Адрес
     @Basic
-    private String clientPhoneNumder;
+    private String clientPhoneNumder;       //Номер телефона
     @Basic
-    private Date dateRegistration;
+    private Date dateRegistration;          //Дата регистрации
 
     @OneToMany(mappedBy = "client")
     private Collection<Order> orders;
