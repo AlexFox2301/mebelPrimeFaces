@@ -1,87 +1,83 @@
-<%--
-Created by IntelliJ IDEA.
-User: Artyom
-Date: 03.11.2017
-Time: 23:58
-To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>newOrderKard</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>New Order Kard</title>
+    <link rel="icon" href="galereya/drel-drawing.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<div id="newOrder">
+<body class="total">
+
     <header>
         <h2 align="center">ЧП "РИО" </h2>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
     </header>
 
     <main>
-        <h3 align="center">Карточка заказа</h3>
+        <h1 align="center">Карточка заказа</h1>
         <form>
-            <table class="orderCard">
+            <table border="1" class="table">
                 <tr>
-                    <td class="orderCard">ID заказа</td>
-                    <td class="orderCard"><input type="text" readonly name="idOrder"></td>
+                    <td width="20%">ID заказа</td>
+                    <td class="orderCard"><input type="text" readonly name="idOrder" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Клиент</td>
-                    <td class="orderCard"><input type="text" placeholder="ФИО и ID" required size="50" name="client">
+                    <td >Клиент</td>
+                    <td ><input type="text" placeholder="ФИО и ID" required size="50" name="client" id="input">
                     </td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Наименование</td>
-                    <td class="orderCard"><input type="text" name="nameOrder" list="nameOrder"></td>
+                    <td >Наименование</td>
+                    <td ><input type="text" name="nameOrder" list="nameOrder" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Срок выполнения</td>
-                    <td class="orderCard"><input type="date" required name="deadLine"></td>
+                    <td >Срок выполнения</td>
+                    <td ><input type="date" required name="deadLine" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Себестоимость</td>
-                    <td class="orderCard"><input type="text" name="costPrice"></td>
+                    <td>Себестоимость</td>
+                    <td><input type="text" name="costPrice" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Стоимость</td>
-                    <td class="orderCard"><input type="text" name="value"></td>
+                    <td>Стоимость</td>
+                    <td><input type="text" name="value" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Адрес заказа</td>
-                    <td class="orderCard"><input type="text" required size="50" name="adresOrder"></td>
+                    <td>Адрес заказа</td>
+                    <td><input type="text" required size="50" name="adresOrder" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Замер</td>
-                    <td class="orderCard"><input type="file" multiple name="measurement"></td>
+                    <td>Замер</td>
+                    <td><input type="file" multiple name="measurement" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Дизайн модель</td>
-                    <td class="orderCard"><input type="file" multiple name="designModel"></td>
+                    <td>Дизайн модель</td>
+                    <td><input type="file" multiple name="designModel" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Технологическая документация</td>
-                    <td class="orderCard"><input type="file" multiple name="TechnologicalDocumentation"></td>
+                    <td>Технологическая документация</td>
+                    <td><input type="file" multiple name="TechnologicalDocumentation" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Фото заказа</td>
-                    <td class="orderCard"><input type="file" accept="image/*" multiple name="fotoOrder"></td>
+                    <td>Фото заказа</td>
+                    <td><input type="file" accept="image/*" multiple name="fotoOrder" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Исполнитель</td>
-                    <td class="orderCard"><input type="text" placeholder="ФИО и ID исполнителя" name="collector"></td>
+                    <td>Исполнитель</td>
+                    <td><input type="text" placeholder="ФИО и ID исполнителя" name="collector" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Дата сдачи заказа</td>
-                    <td class="orderCard"><input type="date" name="dateDelivery"></td>
+                    <td>Дата сдачи заказа</td>
+                    <td><input type="date" name="dateDelivery" id="input"></td>
                 </tr>
                 <tr>
-                    <td class="orderCard">Примечание</td>
-                    <td class="orderCard"><textarea name="note" cols="50" rows="10" wrap="soft"></textarea></td>
+                    <td>Примечание</td>
+                    <td><textarea name="note" cols="50" rows="10" wrap="soft" id="input"></textarea></td>
                 </tr>
             </table>
-            <input type="submit">
+            <input type="submit" class="buttomFind">            
+        
+        
             <datalist id="nameOrder">
                 <option value="Кухня">
                 <option value="Детская">
@@ -93,11 +89,10 @@ To change this template use File | Settings | File Templates.
                 <option value="Кровать">
             </datalist>
         </form>
+        <a href="orderBook.xhtml">
+                <button class="buttomFind">Выйти</button>
+            </a>
     </main>
-    <footer>
-        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
-            11-28-98</p>
-    </footer>
-</div>
+    
 </body>
 </html>

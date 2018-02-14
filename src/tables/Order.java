@@ -4,13 +4,20 @@ package tables;
 import javax.persistence.*;
 import java.util.Date;
 
+//class Confirmation {
+//    public enum confirmation {CONFIRMED, CANCELED};
+//}
+//
+//class State {
+//    private enum state {DELIVERED, NOT_DELIVERED};
+//}
+
+
 
 //ЗАКАЗ
 @Entity
 public class Order {
 
-    private enum confirmation {confirmed, canceled};
-    private enum state {delivered, not_delivered};
 
 
     @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
@@ -33,8 +40,10 @@ public class Order {
     private String designModel;                            //дизайн модель ссылка на место хранения
     @Basic
     private String techDoc;                                //технологическая документация ссылка на место хранения
-    private enum confirmation {confirmed, canceled};       //Подтверждение (подтвержден / отменен)
-    private enum state {delivered, not_delivered};         //Статус (сдан / не сдан)
+    @Basic
+    private boolean confirmation;                         //Подтверждение (подтвержден / отменен)
+    @Basic
+    private boolean state;                                    //Статус (сдан / не сдан)
     @Basic
     private String employee;                                //исполнитель
     @Basic
@@ -155,6 +164,22 @@ public class Order {
         this.orderName = orderName;
     }
 
+    public boolean isConfirmation() {
+        return confirmation;
+    }
+
+    public void setConfirmation(boolean confirmation) {
+        this.confirmation = confirmation;
+    }
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
+
     public String getFoto() {
         return foto;
     }
@@ -163,5 +188,19 @@ public class Order {
         this.foto = foto;
     }
 
+    public String getEmployee() {
+        return employee;
+    }
 
+    public void setEmployee(String employee) {
+        this.employee = employee;
+    }
+
+    public Date getActualDateOfDelivery() {
+        return actualDateOfDelivery;
+    }
+
+    public void setActualDateOfDelivery(Date actualDateOfDelivery) {
+        this.actualDateOfDelivery = actualDateOfDelivery;
+    }
 }

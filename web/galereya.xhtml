@@ -1,69 +1,104 @@
-<%--
-Created by IntelliJ IDEA.
-User: Artyom
-Date: 03.11.2017
-Time: 22:11
-To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>galereya</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Galereya</title>
+    <link rel="icon" href="galereya/drel-drawing.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div id="galereya">
+    
+<body class="total">
+
     <header>
         <h2 align="center">ЧП "РИО" </h2>
+        <p align="center" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
+        <form align="right">
+            <input type="search" placeholder="ПОИСК" class="search">
+            <input type="submit" class="buttomFind">
+        </form>
+        <h1 align="center">Фото галерея</h1>
     </header>
-
-    <aside border="0.5">
+    
+<div id="grid">
+    
+    <div class="col_left">
+        
+        
+        <a href="home.xhtml">
+            <button class="buttom">Меню</button>
+        </a><br>
+        <a href="loginPage.xhtml" target="_blank"
+           onclick="window.open(this.href,'description',' width=700,height=900, top=50, left=50,resizable=no, scrollbars=yes');return false;">
+            <button class="buttom">Выход</button>
+        </a><br>
+        
+    </div>
+        
+    <div class="col_centr">
+        
+        <aside border="0.5">
         <p align="center">
             <a href="galereya/bed/">
-                <img src="galereya/bed/bedTitle.jpg" alt="Кровати" width="250" border="2">
+                <img src="galereya/bed/bedTitle.jpg" alt="Кровати" height="220" border="2">
             </a>
 
             <a href="galereya/cabinet/">
-                <img src="galereya/cabinet/cabitetTitle.jpg" alt="Горка" width="250" border="2">
+                <img src="galereya/cabinet/cabitetTitle.jpg" alt="Горка" height="220" border="2">
+            </a>
+            
+            <a href="galereya/wardrobeCompartment/">
+                <img src="galereya/wardrobeCompartment/wardrobeCompartmentTitle.jpg" alt="Шкаф купе" height="220"
+                     border="2">
+            </a>
+            
+            <a href="galereya/kitchen/">
+                <img src="galereya/kitchen/kitchenTitle.jpg" alt="Кухня" height="220" border="2">
             </a>
 
             <a href="galereya/childrenRoom/" width="250">
-                <img src="galereya/childrenRoom/childrenRoomTitle.jpg" alt="Детская" width="250" border="2">
+                <img src="galereya/childrenRoom/childrenRoomTitle.jpg" alt="Детская" height="220" border="2">
             </a>
 
             <a href="galereya/computerDesk/">
-                <img src="galereya/computerDesk/computerDeskTitle.jpg" alt="Компьютерные столы" width="250" border="2">
+                <img src="galereya/computerDesk/computerDeskTitle.jpg" alt="Компьютерные столы" height="220" border="2">
             </a>
 
             <a href="galereya/table/">
-                <img src="galereya/table/tableTitle.jpg" alt="Cтолы" width="250" border="2">
+                <img src="galereya/table/tableTitle.jpg" alt="Cтолы" height="220" border="2">
             </a>
 
             <a href="galereya/hallway/">
-                <img src="galereya/hallway/hallwayTitle.jpg" alt="Прихожая" width="250" border="2">
-            </a>
+                <img src="galereya/hallway/hallwayTitle.jpg" alt="Прихожая" height="220" border="2">
+            </a>            
 
-            <a href="galereya/kitchen/">
-                <img src="galereya/kitchen/kitchenTitle.jpg" alt="Кухня" width="250" border="2">
-            </a>
-
-            <a href="galereya/wardrobeCompartment/">
-                <img src="galereya/wardrobeCompartment/wardrobeCompartmentTitle.jpg" alt="Шкаф купе" width="250"
-                     border="2">
-            </a></p>
+            </p>
     </aside>
+        
+    </div>
+        
+    <div class="col_right">
+           
+            <a href="orderBook.xhtml">
+                <button class="buttom">Заказы</button>
+            </a>
+            <a href="client.xhtml">
+                <button class="buttom">Клиенты</button>
+            </a>
+            <a href="employee.xhtml">
+                <button class="buttom">Сотрудники</button>
+            </a>
+            <a href="stock.xhtml">
+                <button class="buttom">Склад</button>
+            </a>
+            <a href="vendor.xhtml">
+                <button class="buttom">Поставщики</button>
+            </a>
+            
+        
+    </div>    
 
-    <main>
-        <a href="home.html">
-            <button>Вернуться в главное меню</button>
-        </a>
-    </main>
+    
 
-    <footer>
-        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
-            11-28-98</p>
-    </footer>
+    
 </div>
 </body>
 </html>

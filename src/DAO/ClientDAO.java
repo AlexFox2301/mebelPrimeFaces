@@ -9,7 +9,7 @@ import java.util.List;
 
 @Stateless
 public class ClientDAO {
-    @PersistenceContext
+    @PersistenceContext (unitName = "WebAppPU")
     EntityManager emClient;
 
     public List<Client> findAll() {

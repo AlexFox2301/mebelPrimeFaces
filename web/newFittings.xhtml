@@ -1,52 +1,45 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Simplex
-  Date: 06.11.2017
-  Time: 11:50
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>newFittings</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>New Fitting</title>
+    <link rel="icon" href="galereya/drel-drawing.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<div id="newFittings">
+<body class="total">
+
     <header>
         <h2 align="center">ЧП "РИО" </h2>
+        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
     </header>
 
     <main>
         <form>
-            <table>
+            <table border="1" class="table">
                 <tr>
-                    <td>ID</td>
-                    <td><input type="text" readonly></td>
+                    <td width="20%">ID</td>
+                    <td><input type="text" readonly id="input"></td>
                 </tr>
                 <tr>
                     <td>Наименование</td>
-                    <td><input type="text" name="fittingName" size="70"></td>
+                    <td><input type="text" name="fittingName" id="input"></td>
                 </tr>
                 <tr>
                     <td>Производитель</td>
-                    <td><input type="text" name="fittingManufacturer" size="70"></td>
+                    <td><input type="text" name="fittingManufacturer" id="input"></td>
                 </tr>
                 <tr>
                     <td>Цена</td>
-                    <td><input type="text" name="fittingPrice"></td>
+                    <td><input type="text" name="fittingPrice" id="input"></td>
                 </tr>
             </table>
-            <input type="submit">
+           <input type="submit" class="buttomFind">
+            
         </form>
+        <a href="stock.xhtml">
+                <button class="buttomFind">Выйти</button>
+            </a>
     </main>
 
-    <footer>
-        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
-            11-28-98</p>
-    </footer>
-</div>
 </body>
 </html>

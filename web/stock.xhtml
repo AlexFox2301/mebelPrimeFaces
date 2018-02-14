@@ -1,33 +1,60 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Simplex
-  Date: 06.11.2017
-  Time: 11:24
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>stock</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Stock</title>
+    <link rel="icon" href="galereya/drel-drawing.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div id="stock">
+<body class="total">
     <header>
         <h2 align="center">ЧП "РИО" </h2>
-        <form align="right"><input type="search" placeholder="ПОИСК" size="40"></form>
-        <h3 align="center">Склад</h3>
+        <p align="center" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
+        <form align="right">
+            <input type="search" placeholder="ПОИСК" class="search">
+            <input type="submit" class="buttomFind">
+        </form>
+        <h1 align="center">Склад</h1>
     </header>
 
     <main>
-        <table border="1" width="100%">
-            <tr align="center" class="tableHeader">
-                <td width="5%" class="tableHeader">ID</td>
-                <td class="tableHeader">Наименование</td>
-                <td width="10%" class="tableHeader">Количество</td>
-                <td width="15%" class="tableHeader">Производитель</td>
-                <td width="10%" class="tableHeader">Стоимость</td>
+        
+        <div id="grid">
+    
+    <div class="col_left">
+        
+        <a href="newClienKard.xhtml" target="_blank"
+           onclick="window.open(this.href,'description',' width=680,height=520, top=300, left=500,resizable=no, scrollbars=yes');return false;">
+            <button class="buttom">Добавить</button>
+        </a><br>
+         <a href="newClienKard.xhtml" target="_blank"
+           onclick="window.open(this.href,'description',' width=680,height=450, top=300, left=520,resizable=no, scrollbars=yes');return false;">
+            <button class="buttom">Редактировать</button>
+        </a><br>
+        <button class="buttom">Удалить</button>
+            <br>
+        <a href="--.xhtml" target="_blank"
+           onclick="window.open(this.href,'description',' width=700,height=900, top=50, left=50,resizable=no, scrollbars=yes');return false;">
+            <button class="buttom">Отчет</button>
+        </a><br>
+        <a href="home.xhtml">
+            <button class="buttom">Меню</button>
+        </a><br>
+        <a href="loginPage.xhtml" target="_blank"
+           onclick="window.open(this.href,'description',' width=700,height=900, top=50, left=50,resizable=no, scrollbars=yes');return false;">
+            <button class="buttom">Выход</button>
+        </a><br>
+        
+    </div>
+        
+    <div class="col_centr">
+        
+        <table class="table" border="1">
+            <tr align="center">
+                <td width="5%">ID</td>
+                <td>Наименование</td>
+                <td width="10%">Количество</td>
+                <td width="15%">Производитель</td>
+                <td width="10%">Стоимость</td>
             </tr>
             <tr align="center">
                 <td>1</td>
@@ -35,21 +62,181 @@
                 <td>3</td>
                 <td>4</td>
                 <td>5</td>
+                
+            </tr>
+             <tr>
+                <td> 1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>                
+            </tr>
+            <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>15</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>            
+            <tr>
+                <td>19</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
-        <a href="newFittings.html" target="_blank"
-           onclick="window.open(this.href,'description',' width=660,height=330, top=300, left=500,resizable=no, scrollbars=yes');return false;">
-            <button>Добавить новую позицию</button>
+        
+    </div>
+        
+    <div class="col_right">
+           
+            <a href="orderBook.xhtml">
+                <button class="buttom">Заказы</button>
+            </a>
+        
+            <a href="client.xhtml">
+                <button class="buttom">Клиенты</button>
+            </a>
+           
+            <a href="employee.xhtml">
+                <button class="buttom">Сотрудники</button>
+            </a>
+            
+            <a href="vendor.xhtml">
+                <button class="buttom">Поставщики</button>
+            </a>
+            <a href="galereya.xhtml">
+            <button class="buttom">Фото галаеря</button>
         </a>
-        <a href="home.html">
-            <button>Вернуться в щлавное меню</button>
-        </a>
+        
+    </div>
+        
+</div> 
+        
     </main>
 
-    <footer>
-        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067
-            11-28-98</p>
-    </footer>
-</div>
+    
 </body>
 </html>
