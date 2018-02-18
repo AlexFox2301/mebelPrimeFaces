@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Employee_Base</title>
+    <h:link rel="icon" href="galereya/drel-drawing.png"/>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head >
+
+<h:body styleClass="total">
+
+    <h2 align="center">ЧП "РИО" </h2>
+    <p align="center" >MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
+    <h1 align="center">Сотрудники</h1>
+
+    <f:view>
+
+        <!--<h:form >-->
+
+            <p:inputText value="#{employeeBean.searchText}" styleClass="search" style="float: right"/>
+            <p:button value="#{employeeBean.search}" styleClass="buttomFind" style="float: right"/>
+
+
+        <p:layout style="min-width:400px;min-height:200px;">
+
+            <p:layoutUnit position="west" resizable="true" size="100" minSize="40" maxSize="200">
+                <!--Lefr-->
+
+                <p:button href="newEmployeeKard.xhtml"  styleClass="buttom">Добавить</p:button>
+                <br/>
+                <p:button href="newEmployeeKard.xhtml" target="_blank" onclick="window.open(this.href, 'description', 'width=1000,height=700, top=50, left=50,resizable=no, scrollbars=yes'); return false;" styleClass="buttom">Редактировать</p:button>
+                <br/>
+                <p:button styleClass="buttom" value="#{employeeBean.deleted}">Удалить</p:button>
+                <br/>
+                <p:button href="reportEmployee.xhtml" target="_blank" onclick="window.open(this.href, 'description', 'width=1000,height=700, top=50, left=50,resizable=no, scrollbars=yes'); return false;" styleClass="buttom">Отчет</p:button>
+                <br/>
+                <p:button href="home.xhtml" styleClass="buttom">Меню</p:button>
+                <br/>
+                <p:button href="index.xhtml" styleClass="buttom">Выход</p:button>
+
+            </p:layoutUnit>
+
+            <p:layoutUnit position="center">
+                <!--Center-->
+
+                <p:dataTable var="employee" value="#{employeeBean.employees}" styleClass="table">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{employee.id}" />
+                    </p:column>
+
+                    <p:column headerText="Фото">
+                        <h:outputText value="#{employee.id_foto}" />
+                    </p:column>
+
+                    <p:column headerText="ФИО">
+                        <h:outputText value="#{employee.fullName}" />
+                    </p:column>
+
+                    <p:column headerText="Должность">
+                        <h:outputText value="#{employee.position}" />
+                    </p:column>
+
+                    <p:column headerText="Адрес">
+                        <h:outputText value="#{employee.address}" />
+                    </p:column>
+
+                    <p:column headerText="Телефон">
+                        <h:outputText value="#{employee.phoneNumber}" />
+                    </p:column>
+
+                    <p:column headerText="E-mail">
+                        <h:outputText value="#{employee.e_mail}" />
+                    </p:column>
+
+                    <p:column headerText="Дата приема">
+                        <h:outputText value="#{employee.dateAdmissiom}" />
+                    </p:column>
+
+                    <p:column headerText="Дата Увольнения">
+                        <h:outputText value="#{employee.dateOfDismissal}" />
+                    </p:column>
+
+                </p:dataTable>
+
+            </p:layoutUnit>
+
+            <p:layoutUnit position="east" resizable="true" size="100" minSize="40" maxSize="200">
+                <!--Right-->
+
+                <!--<p:button href="orderBook.xhtml" styleClass="buttom">Заказы</p:button>-->
+                <br/>
+                <!--<p:button href="client.xhtml" styleClass="buttom">Клиенты</p:button>-->
+                <!--<br/>-->
+                <!--<p:button href="stock.xhtml" styleClass="buttom">Склад</p:button>-->
+                <!--<br/>-->
+                <!--<p:button href="vendor.xhtml" styleClass="buttom">Поставщики</p:button>-->
+                <!--<br/>-->
+                <!--<p:button href="galereya.xhtml" styleClass="buttom">Фото галаеря</p:button>-->
+
+            </p:layoutUnit>
+
+        </p:layout>
+
+        <!--</h:form>-->
+
+    </f:view>
+
+</h:body>
+
+</html>

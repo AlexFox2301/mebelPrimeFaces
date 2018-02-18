@@ -17,13 +17,14 @@ public class Employee {
     private String position;            //Должность
     private String address;             //Адрес
     private String phoneNumber;         //Номер телефона
+    private String e_mail;               //Электронный почтовый ящик
     private Integer id_foto;            //Id фото
     private Date dateAdmissiom;         //Дата приёма
     private Date dateOfDismissal;       //Дата увольнения
     private String login;               //Логин
     private String password;            //Пароль
 
-    /////////////////
+    ////////////////////////Конструкторы////////////////////////
 
     public Employee(String fullName, String position) {
         this.fullName = fullName;
@@ -46,7 +47,7 @@ public class Employee {
     public Employee() {
     }
 
-///////////////////
+//////////////////////////Геттеры / Сеттеры//////////////////////
 
     public String getFullName() {
         return fullName;
@@ -126,5 +127,13 @@ public class Employee {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getE_mail() {
+        return e_mail;
+    }
+
+    public void setE_mail(String e_mail) {
+        this.e_mail = e_mail;
     }
 }

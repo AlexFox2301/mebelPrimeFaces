@@ -1,299 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Employee Base</title><link rel="icon" href="galereya/drel-drawing.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="total">
-    <header>
-        <h2 align="center">ЧП "РИО" </h2>
-        <p align="center" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
-        <form align="right">
-            <input type="search" placeholder="ПОИСК" class="search">
-            <input type="submit" class="buttomFind">
-        </form>
-        <h1 align="center">Сотрудники</h1>
-    </header>
+<h:head>
+    <title>Employee_Base</title>
+    <h:link rel="icon" href="galereya/drel-drawing.png"/>
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head >
 
-    
-        
-<div id="grid">
-    
-    <div class="col_left">
-        
-        <a href="newEmployeeKard.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=1000,height=700, top=50, left=50,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Добавить</button>
-        </a><br>
-         <a href="newEmployeeKard.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=1000,height=700, top=50, left=50,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Редактировать</button>
-        </a><br>
-        <button class="buttom">Удалить</button>
-            <br>
-        <a href="--.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=700,height=900, top=50, left=50,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Отчет</button>
-        </a><br>
-        <a href="home.xhtml">
-            <button class="buttom">Меню</button>
-        </a><br>
-        <a href="loginPage.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=700,height=900, top=50, left=50,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Выход</button>
-        </a><br>
-        
-    </div>
-        
-    <div class="col_centr">
-        
-        <table class="table" border="1">
-           <tr align="center" class="tableHeader">
-                <td width="5%" class="tableHeader">ID</td>
-                <td width="15%" class="tableHeader">Фамилия</td>
-                <td width="10%" class="tableHeader">Имя</td>
-                <td width="15%" class="tableHeader">Отчество</td>
-                <td class="tableHeader">Домашний адрес</td>
-                <td width="10%" class="tableHeader">Номер телефона</td>
-                <td width="10%" class="tableHeader">e-mail</td>
-                <td width="10%" class="tableHeader">Должность</td>
-            </tr>
-            <tr align="center">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-            </tr>
-             <tr>
-                <td> 1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            
-            <tr>
-                <td>15</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>            
-            <tr>
-                <td>19</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-        
-    </div>
-        
-    <div class="col_right">
-           
-            <a href="orderBook.xhtml">
-                <button class="buttom">Заказы</button>
-            </a>
-            <a href="client.xhtml">
-                <button class="buttom">Клиенты</button>
-            </a>            
-            <a href="stock.xhtml">
-                <button class="buttom">Склад</button>
-            </a>
-            <a href="vendor.xhtml">
-                <button class="buttom">Поставщики</button>
-            </a>
-            <a href="galereya.xhtml">
-            <button class="buttom">Фото галаеря</button>
-        </a>
-        
-    </div>
-        
-</div>  
-</body>
+<h:body styleClass="total">
+
+    <h2 align="center">ЧП "РИО" </h2>
+    <p align="center" >MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
+    <h1 align="center">Сотрудники</h1>
+
+    <p:inputText value="#{employeeBean.searchText}" styleClass="search" placeholder="Поиск"/>
+    <p:commandButton value="Поиск" actionListener="#{employeeBean.search}" styleClass="buttomFind"/>
+    <br/>
+
+    <p:layout>
+
+        <p:layoutUnit position="west" resizable="true"  maxSize="200" minSize="50" styleClass="col_left">
+            <p:button value="Добавить" href="newEmployeeRard.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Редактировать" href="newEmployeeRard.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:commandButton value="Удалить" actionListener="#{employeeBean.deleted}" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Меню" href="home.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Выйти" href="index.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+        </p:layoutUnit>
+
+        <p:layoutUnit position="center" resizable="true" style="background-color: darkgray">
+
+            <p:dataTable var="employee" value="#{employeeBean.employees}">
+
+            <p:column headerText="Id">
+            <h:outputText value="#{employee.id}"/>
+            </p:column>
+
+            <p:column headerText="Foto">
+            <h:outputText value="#{employee.id_foto}"/>
+            </p:column>
+
+            </p:dataTable>
+
+        </p:layoutUnit>
+
+        <p:layoutUnit position="east" style="width: 25%">
+            <p:button value="Заказы" styleClass="button" href="orderBook.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Клиенты" styleClass="button" href="client.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Склад" styleClass="button" href="stock.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Поставщики" styleClass="button" href="vendor.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+            <br/>
+            <p:button value="Фото" styleClass="button" href="galereya.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+        </p:layoutUnit>
+
+    </p:layout>
+
+<f:view>
+    <h:outputLabel value="Hello, world"/>
+</f:view>
+
+</h:body>
+
 </html>

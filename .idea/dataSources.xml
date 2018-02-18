@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="dbmebel@localhost" uuid="ffc47ed9-05d1-4f75-aa59-9b95f697a4d9">
+    <data-source source="LOCAL" name="dbmebel@localhost" uuid="1d7f1e14-2edd-4193-9fa7-d771f4ace2da">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -13,7 +13,7 @@
         <property name="characterEncoding" value="utf8" />
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
-        <property name="createDatabaseIfNotExist" value="true" />
+        <property name="createDatabaseIfNotExist" value="yes" />
       </driver-properties>
     </data-source>
   </component>

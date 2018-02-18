@@ -21,21 +21,17 @@ public class EmployeeBean implements Serializable{
         return employeeDAO.findAll();
     }
 
-    /////////////Переменные////////////////////////////////////////
+    /////////////Переменные/////////////////////////////////////////////////
 
     private String login;
     private String password;
-    private boolean logged;
+
+    private boolean loginSuccess;
+    private boolean createSuccess;
+
+    private String searchText;
 
     /////////////Геттеры / Сеттеры /////////////////////////////////////////
-
-    public boolean isLogged() {
-        return logged;
-    }
-
-    public void setLogged(boolean logged) {
-        this.logged = logged;
-    }
 
     public String getLogin() {
         return login;
@@ -53,13 +49,41 @@ public class EmployeeBean implements Serializable{
         this.password = password;
     }
 
-    ///////////////Методы//////////////////////////////////
+    public boolean isLoginSuccess() {
+        return loginSuccess;
+    }
 
-    public void doLogin(){
+    public void setLoginSuccess(boolean loginSuccess) {
+        this.loginSuccess = loginSuccess;
+    }
 
-        logged = true;
+    public boolean isCreateSuccess() {
+        return createSuccess;
+    }
+
+    public void setCreateSuccess(boolean createSuccess) {
+        this.createSuccess = createSuccess;
+    }
+
+    public String getSearchText() {
+        return searchText;
+    }
+
+    public void setSearchText(String searchText) {
+        this.searchText = searchText;
+    }
+
+    ///////////////Методы//////////////////////////////////////////////////
+
+    public void checkPassword(){
+        loginSuccess = employeeDAO.checkPassword(login, password);
+    }
+
+    public void search(){
 
     }
+
+    public void deleted(){}
 
 
 }
