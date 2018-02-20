@@ -74,7 +74,7 @@ public class Order {
     public Order() {
     }
 
-    /////////////////
+    /////////////Геттеры / Сеттеры /////////////////////////////////////////
 
     public Client getClient() {
         return client;

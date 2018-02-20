@@ -1,8 +1,7 @@
 package beans;
 
-
-import DAO.ClientDAO;
-import tables.Client;
+import DAO.OrderDAO;
+import tables.Order;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
@@ -11,22 +10,24 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
-@ManagedBean(name="dtClientBean")
+@ManagedBean (name = "dtOrderBean")
 @Named
 @SessionScoped
-public class ClientBean implements Serializable {
-   @EJB
-    ClientDAO clientDAO;
+public class OrderBean implements Serializable{
 
-   public List<Client> getClients(){
-       return clientDAO.findAll();
-   }
+    @EJB
+    OrderDAO orderDAO;
+
+    public List<Order> getOrders(){
+        return orderDAO.findAll();
+    }
 
     /////////////Переменные/////////////////////////////////////////////////
 
     private String searchText;
 
-   /////////////Геттеры / Сеттеры /////////////////////////////////////////
+    /////////////Геттеры / Сеттеры /////////////////////////////////////////
+
 
     public String getSearchText() {
         return searchText;
@@ -36,7 +37,7 @@ public class ClientBean implements Serializable {
         this.searchText = searchText;
     }
 
-///////////////Методы//////////////////////////////////////////////////
+    ///////////////Методы//////////////////////////////////////////////////
 
     public void search(){
 

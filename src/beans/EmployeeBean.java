@@ -11,9 +11,10 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
-@ManagedBean(name="dtBasicView")
+@ManagedBean(name="dtEmployeeBean")
 @Named
 @SessionScoped
+
 public class EmployeeBean implements Serializable{
 
     @EJB
@@ -22,6 +23,7 @@ public class EmployeeBean implements Serializable{
     public List<Employee> getEmployees(){
         return employeeDAO.findAll();
     }
+
 
     /////////////Переменные/////////////////////////////////////////////////
 
@@ -88,5 +90,7 @@ public class EmployeeBean implements Serializable{
     }
 
     public void deleted(){}
+
+
 
 }

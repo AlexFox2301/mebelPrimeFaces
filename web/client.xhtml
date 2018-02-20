@@ -1,120 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html
-        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+<html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-<head>
-    <title>Client Base</title>
-    <link rel="icon" href="galereya/drel-drawing.png">
-    <link rel="stylesheet" href="resources/css/style.css">
-</head>
-<body class="total">
-<!--<h:header>-->
-<h2 align="center">ЧП "РИО" </h2>
-<p align="center">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
-<!--<h:form>-->
-<!--<f:input type="search" placeholder="ПОИСК" class="search">-->
-<!--<h:input type="submit" class="buttomFind"></h:input>-->
-<!--</h:form>-->
-<h1 align="center">Клиентская база</h1>
-<!--</header>-->
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Client_Base</title>
+    <link rel="shortcut icon" type="image/png" href="galereya/drel-drawing.png" />
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
+
+<h:body styleClass="total">
+
+    <h2 align="center">ЧП "РИО" </h2>
+    <p align="center" >MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
+    <h1 align="center">Клиенты</h1>
+
+    <p:inputText value="#{clientBean.searchText}" styleClass="search" placeholder="Поиск"/>
+    <p:commandButton value="Поиск" actionListener="#{clientBean.search}" styleClass="buttomFind"/>
+    <br/>
+
+    <p:layout style="background-color: darkgray">
+
+        <p:layoutUnit position="west" resizable="true" maxSize="200" minSize="50" styleClass="col_left" style="background-color: darkgray">
+            <p:button value="Добавить" href="newClientKard.xhtml" styleClass="buttom"/>
+            <p:button value="Редактировать" href="newClientKard.xhtml" styleClass="buttom"/>
+            <p:commandButton value="Удалить" actionListener="#{clientBean.deleted}" styleClass="buttom"/>
+            <p:button value="Меню" href="home.xhtml" styleClass="buttom"/>
+            <p:button value="Выход" href="index.xhtml" styleClass="buttom"/>
+        </p:layoutUnit>
 
 
+        <p:layoutUnit position="center">
 
-<div id="grid">
+            <p:dataTable var="client" value="#{dtclientBean.clients}" styleClass="table">
 
-    <div class="col_left">
-
-        <a href="newClienKard.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=680,height=520, top=300, left=500,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Добавить</button>
-        </a>
-        <a href="newClienKard.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=680,height=450, top=300, left=520,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Редактировать</button>
-        </a>
-        <button class="buttom">Удалить</button>
-
-        <a href="reportClient.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=500,height=600, top=100, left=300,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Отчет</button>
-        </a>
-        <a href="home.xhtml">
-            <button class="buttom">Меню</button>
-        </a>
-        <a href="loginPage.xhtml" target="_blank"
-           onclick="window.open(this.href,'description',' width=700,height=900, top=50, left=50,resizable=no, scrollbars=yes');return false;">
-            <button class="buttom">Выход</button>
-        </a>
-
-    </div>
-
-    <div class="col_centr">
-
-        <f:view>
-            <p:dataTable var="client" value="#{clientBean.clients}" rendered="#{not empty clientBean.clients}">
                 <p:column headerText="Id">
-                    <h:outputText value="#{client.id}" />
+                    <h:outputText value="#{client.id}"/>
                 </p:column>
 
                 <p:column headerText="Last Name">
-                    <h:outputText value="#{client.clientLastName}" />
+                    <h:outputText value="#{client.clientLastName}"/>
                 </p:column>
 
                 <p:column headerText="First Name">
-                    <h:outputText value="#{client.clientFirstName}" />
+                    <h:outputText value="#{client.clientFirstName}"/>
                 </p:column>
 
                 <p:column headerText="Father Name">
-                    <h:outputText value="#{client.clientFatherName}" />
+                    <h:outputText value="#{client.clientFatherName}"/>
                 </p:column>
 
-                <p:column headerText="Address Home">
-                    <h:outputText value="#{client.adressHome}" />
+                <p:column headerText="Address">
+                    <h:outputText value="#{client.adressHome}"/>
                 </p:column>
 
                 <p:column headerText="Phone Number">
-                    <h:outputText value="#{client.clientPhoneNumder}" />
+                    <h:outputText value="#{client.clientPhoneNumder}"/>
                 </p:column>
 
-                <p:column headerText="Registration date">
-                    <h:outputText value="#{client.dateRegistration}" />
+                <p:column headerText="E-mail">
+                    <h:outputText value="#{client.e_mail}"/>
+                </p:column>
+
+                <p:column headerText="Date Registration">
+                    <h:outputText value="#{client.dateRegistration}"/>
                 </p:column>
 
             </p:dataTable>
 
-        </f:view>
+        </p:layoutUnit>
 
 
-    </div>
+        <p:layoutUnit position="east" resizable="true" maxSize="200" minSize="50" styleClass="col_left">
+            <p:button value="Заказы" href="orderBook.xhtml" styleClass="buttom"/>
+            <p:button value="Сотрудники" href="employee.xhtml" styleClass="buttom"/>
+            <p:button value="Склад" href="stock.xhtml" styleClass="buttom"/>
+            <p:button value="Поставщики" href="vendor.xhtml" styleClass="buttom"/>
+            <p:button value="Галерея" href="galereya.xhtml" styleClass="buttom"/>
+        </p:layoutUnit>
 
-    <div class="col_right">
+    </p:layout>
 
-        <a href="orderBook.xhtml">
-            <button class="buttom">Заказы</button>
-        </a>
+</h:body>
 
-        <a href="employee-.xhtml">
-            <button class="buttom">Сотрудники</button>
-        </a>
-        <a href="stock.xhtml">
-            <button class="buttom">Склад</button>
-        </a>
-        <a href="vendor.xhtml">
-            <button class="buttom">Поставщики</button>
-        </a>
-        <a href="galereya.xhtml">
-            <button class="buttom">Фото галаеря</button>
-        </a>
 
-    </div>
-
-</div>
-
-</body>
 
 </html>

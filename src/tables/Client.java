@@ -22,6 +22,8 @@ public class Client {
     @Basic
     private String clientPhoneNumder;       //Номер телефона
     @Basic
+    private String e_mail;
+    @Basic
     private Date dateRegistration;          //Дата регистрации
 
     @OneToMany(mappedBy = "client")
@@ -122,5 +124,13 @@ public class Client {
 
     public void setDateRegistration(Date dateRegistration) {
         this.dateRegistration = dateRegistration;
+    }
+
+    public String getE_mail() {
+        return e_mail;
+    }
+
+    public void setE_mail(String e_mail) {
+        this.e_mail = e_mail;
     }
 }

@@ -1,27 +1,35 @@
 package tables;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.faces.bean.ApplicationScoped;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+//@ApplicationScoped
 public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
+    @Basic
     private String fullName;            //Фамилия Имя Отчество
+    @Basic
     private String position;            //Должность
+    @Basic
     private String address;             //Адрес
+    @Basic
     private String phoneNumber;         //Номер телефона
+    @Basic
     private String e_mail;               //Электронный почтовый ящик
+    @Basic
     private Integer id_foto;            //Id фото
+    @Basic
     private Date dateAdmissiom;         //Дата приёма
+    @Basic
     private Date dateOfDismissal;       //Дата увольнения
+    @Basic
     private String login;               //Логин
+    @Basic
     private String password;            //Пароль
 
     ////////////////////////Конструкторы////////////////////////
