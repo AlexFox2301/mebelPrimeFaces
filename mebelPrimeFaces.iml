@@ -43,15 +43,16 @@
     <orderEntry type="library" name="PrimeFaces-6.1" level="project" />
     <orderEntry type="library" name="javax.persistence" level="project" />
     <orderEntry type="library" name="eclipselink-2.6.2" level="project" />
+    <orderEntry type="library" name="eclipselink-2.6.2" level="project" />
+    <orderEntry type="library" name="eclipselink-2.6.2" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Libs/javaee-api-6.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/libs/javaee-api-6.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="eclipselink-2.6.2" level="project" />
   </component>
 </module>

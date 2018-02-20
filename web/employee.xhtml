@@ -9,9 +9,9 @@
 
 <h:head>
     <title>Employee_Base</title>
-    <h:link rel="icon" href="galereya/drel-drawing.png"/>
+    <link rel="shortcut icon" type="image/png" href="galereya/drel-drawing.png" />
     <h:outputStylesheet library="css" name="style.css"/>
-</h:head >
+</h:head>
 
 <h:body styleClass="total">
 
@@ -23,54 +23,83 @@
     <p:commandButton value="Поиск" actionListener="#{employeeBean.search}" styleClass="buttomFind"/>
     <br/>
 
-    <p:layout>
+    <p:layout style="background-color: darkgray">
 
-        <p:layoutUnit position="west" resizable="true"  maxSize="200" minSize="50" styleClass="col_left">
-            <p:button value="Добавить" href="newEmployeeRard.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Редактировать" href="newEmployeeRard.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:commandButton value="Удалить" actionListener="#{employeeBean.deleted}" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Меню" href="home.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Выйти" href="index.xhtml" styleClass="button" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+        <p:layoutUnit position="west" resizable="true" maxSize="200" minSize="50" styleClass="col_left" style="background-color: darkgray">
+            <p:button value="Добавить" href="newEmployeeKard.xhtml" styleClass="buttom"/>
+            <p:button value="Редактировать" href="newEmployeeKard.xhtml" styleClass="buttom"/>
+            <p:commandButton value="Удалить" actionListener="#{employeeBean.deleted}" styleClass="buttom"/>
+            <p:button value="Меню" href="home.xhtml" styleClass="buttom"/>
+            <p:button value="Выход" href="index.xhtml" styleClass="buttom"/>
         </p:layoutUnit>
 
-        <p:layoutUnit position="center" resizable="true" style="background-color: darkgray">
+        
+        <p:layoutUnit position="center">
 
-            <p:dataTable var="employee" value="#{employeeBean.employees}">
+                <p:dataTable var="employee" value="#{employeeBean.employees}">
 
-            <p:column headerText="Id">
-            <h:outputText value="#{employee.id}"/>
-            </p:column>
+                    <p:column headerText="Id">
+                        <h:outputText value="#{employee.id}"/>
+                    </p:column>
 
-            <p:column headerText="Foto">
-            <h:outputText value="#{employee.id_foto}"/>
-            </p:column>
+                    <p:column headerText="Foto">
+                        <h:outputText value="#{employee.id_foto}"/>
+                    </p:column>
 
-            </p:dataTable>
+                    <p:column headerText="Full Name">
+                        <h:outputText value="#{employee.fullName}"/>
+                    </p:column>
+
+                    <p:column headerText="Position">
+                        <h:outputText value="#{employee.position}"/>
+                    </p:column>
+
+                    <p:column headerText="Address">
+                        <h:outputText value="#{employee.address}"/>
+                    </p:column>
+
+                    <p:column headerText="Phone Number">
+                        <h:outputText value="#{employee.phoneNumber}"/>
+                    </p:column>
+
+                    <p:column headerText="E-mail">
+                        <h:outputText value="#{employee.e_mail}"/>
+                    </p:column>
+
+                    <p:column headerText="Login">
+                        <h:outputText value="#{employee.login}"/>
+                    </p:column>
+
+                    <p:column headerText="Password">
+                        <h:outputText value="#{employee.password}"/>
+                    </p:column>
+
+                    <p:column headerText="Date Admision">
+                        <h:outputText value="#{employee.dateAdmissiom}"/>
+                    </p:column>
+
+                    <p:column headerText="Date of Dismissal">
+                        <h:outputText value="#{employee.dateOfDismissal}"/>
+                    </p:column>
+
+                </p:dataTable>
 
         </p:layoutUnit>
 
-        <p:layoutUnit position="east" style="width: 25%">
-            <p:button value="Заказы" styleClass="button" href="orderBook.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Клиенты" styleClass="button" href="client.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Склад" styleClass="button" href="stock.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Поставщики" styleClass="button" href="vendor.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
-            <br/>
-            <p:button value="Фото" styleClass="button" href="galereya.xhtml" style="width: 90%; font-size: 18px; margin: 5px; height: 50px; border-radius: 15px; font-family: serif"/>
+
+        <p:layoutUnit position="east" resizable="true" maxSize="200" minSize="50" styleClass="col_left">
+            <p:button value="Заказы" href="orderBook.xhtml" styleClass="buttom"/>
+            <p:button value="Клиенты" href="client.xhtml" styleClass="buttom"/>
+            <p:button value="Склад" href="stock.xhtml" styleClass="buttom"/>
+            <p:button value="Поставщики" href="vendor.xhtml" styleClass="buttom"/>
+            <p:button value="Галерея" href="galereya.xhtml" styleClass="buttom"/>
         </p:layoutUnit>
 
     </p:layout>
 
+</h:body>
+
 <f:view>
     <h:outputLabel value="Hello, world"/>
 </f:view>
-
-</h:body>
-
 </html>

@@ -6,10 +6,12 @@ import tables.Employee;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
+@ManagedBean(name="dtBasicView")
 @Named
 @SessionScoped
 public class EmployeeBean implements Serializable{
@@ -30,6 +32,8 @@ public class EmployeeBean implements Serializable{
     private boolean createSuccess;
 
     private String searchText;
+
+//    private List<Employee> filteredEmployees;
 
     /////////////Геттеры / Сеттеры /////////////////////////////////////////
 
@@ -84,6 +88,5 @@ public class EmployeeBean implements Serializable{
     }
 
     public void deleted(){}
-
 
 }
