@@ -8,6 +8,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean (name = "dtOrderBean")
@@ -39,9 +40,12 @@ public class OrderBean implements Serializable{
 
     ///////////////Методы//////////////////////////////////////////////////
 
-    public void search(){
+    public void search(){}//липовая заглушка
 
+    public void deleted(){}//липовая заглушка
+
+    public List<String> images (String textFilter){//липовая заглушка
+        List<String> im = new ArrayList<>();
+        return im;
     }
-
-    public void deleted(){}
 }

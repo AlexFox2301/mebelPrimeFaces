@@ -1,0 +1,1 @@
+UPDATE dbmebel.sequence SET SEQ_COUNT = 0 WHERE SEQ_NAME = 'SEQ_GEN';

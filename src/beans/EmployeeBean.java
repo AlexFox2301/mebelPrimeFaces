@@ -85,11 +85,9 @@ public class EmployeeBean implements Serializable{
         loginSuccess = employeeDAO.checkPassword(login, password);
     }
 
-    public void search(){
+    public void search(){}//липовая заглушка
 
-    }
-
-    public void deleted(){}
+    public void deleted(){}//липовая заглушка
 
 
 

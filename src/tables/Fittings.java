@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 public class Fittings {
 
-    @Id @GeneratedValue (strategy = GenerationType.AUTO)
+    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     @Basic
     private String nameFittings;
@@ -15,7 +15,7 @@ public class Fittings {
     @Basic
     private int priceFittings;   //цена в копейках
 
-    ///////////////
+    ////////////////////////Конструкторы////////////////////////
 
     public Fittings(String nameFittings) {
         this.nameFittings = nameFittings;
@@ -24,15 +24,15 @@ public class Fittings {
     public Fittings() {
     }
 
-    //////////////
+    /////////////////////Геттеры / Сеттеры//////////////////////
 
 
     public String getNameFittings() {
         return nameFittings;
     }
 
-    public void setNameFittings(String nameFittings) {
-        this.nameFittings = nameFittings;
+    public void setNameFittings(String nameFitting) {
+        this.nameFittings = nameFitting;
     }
 
     public int getPriceFittings() {

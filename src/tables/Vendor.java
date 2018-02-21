@@ -5,7 +5,6 @@ package tables;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 //ПОСТАВЩИК
 
@@ -20,6 +19,8 @@ public class Vendor {
     private String vendorAdress;
     @Basic
     private String vendorPhoneNumber;
+    @Basic
+    private String e_mail;
     @Basic
     private String priceList;
 
@@ -92,5 +93,13 @@ public class Vendor {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getE_mail() {
+        return e_mail;
+    }
+
+    public void setE_mail(String e_mail) {
+        this.e_mail = e_mail;
     }
 }

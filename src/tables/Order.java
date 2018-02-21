@@ -1,80 +1,59 @@
 package tables;
 
-
+import javax.faces.bean.ManagedBean;
 import javax.persistence.*;
 import java.util.Date;
 
-//class Confirmation {
-//    public enum confirmation {CONFIRMED, CANCELED};
-//}
-//
-//class State {
-//    private enum state {DELIVERED, NOT_DELIVERED};
-//}
 
-
-
-//ЗАКАЗ
+@ManagedBean(name = "order")
+//@EntityListeners(value = "")
 @Entity
 public class Order {
 
-
-
-    @Id @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
-    private Client client;                                  //Клиент
+    private Client client;
     @Basic
-    private String orderName;                               //наименование заказа
+    private String orderName;
     @Basic
-    private Date deadLine;                                  //срок выполнения
+    private Date deadLine;
     @Basic
-    private int costPrice;                                  //себестоимость
+    private int costPrice;
     @Basic
-    private int valueOrder;                                 //стоимость заказа
+    private int valueOrder;
     @Basic
-    private String adressOrder;                             //адрес заказа
+    private String adressOrder;
     @Basic
-    private String measurement;                            //замер ссылка на место хранения
+    private String measurement;
     @Basic
-    private String designModel;                            //дизайн модель ссылка на место хранения
+    private String designModel;
     @Basic
-    private String techDoc;                                //технологическая документация ссылка на место хранения
+    private String techDoc;
     @Basic
-    private boolean confirmation;                         //Подтверждение (подтвержден / отменен)
+    private boolean confirmation;
     @Basic
-    private boolean state;                                    //Статус (сдан / не сдан)
+    private boolean state;
+    @ManyToOne
+    private Employee employee;
     @Basic
-    private String employee;                                //исполнитель
+    private Date actualDateOfDelivery;
     @Basic
-    private Date actualDateOfDelivery;                      //Фактическая дата здачи заказа
+    private String foto;
     @Basic
-    private String foto;                                    //фото ссылка на место хранения
-    @Basic
-    private String note;                                    //примечания
-
-
-    /////////////////
-
-    public Order(Client client) {
-        this.client = client;
-    }
-
-    public Order(Client client, String orderName) {
-        this.client = client;
-        this.orderName = orderName;
-    }
-
-    public Order(Client client, String orderName, String adressOrder) {
-        this.client = client;
-        this.orderName = orderName;
-        this.adressOrder = adressOrder;
-    }
-
-    public Order() {
-    }
+    private String note;
 
     /////////////Геттеры / Сеттеры /////////////////////////////////////////
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Client getClient() {
         return client;
@@ -86,6 +65,10 @@ public class Order {
 
     public String getOrderName() {
         return orderName;
+    }
+
+    public void setOrderName(String orderName) {
+        this.orderName = orderName;
     }
 
     public Date getDeadLine() {
@@ -144,26 +127,6 @@ public class Order {
         this.techDoc = techDoc;
     }
 
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setOrderName(String orderName) {
-        this.orderName = orderName;
-    }
-
     public boolean isConfirmation() {
         return confirmation;
     }
@@ -180,19 +143,11 @@ public class Order {
         this.state = state;
     }
 
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public String getEmployee() {
+    public Employee getEmployee() {
         return employee;
     }
 
-    public void setEmployee(String employee) {
+    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
@@ -202,5 +157,21 @@ public class Order {
 
     public void setActualDateOfDelivery(Date actualDateOfDelivery) {
         this.actualDateOfDelivery = actualDateOfDelivery;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 }

@@ -38,9 +38,7 @@ public class ClientBean implements Serializable {
 
 ///////////////Методы//////////////////////////////////////////////////
 
-    public void search(){
+    public void search(){}//липовая заглушка
 
-    }
-
-    public void deleted(){}
+    public void deleted(){}//липовая заглушка
 }

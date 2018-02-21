@@ -5,7 +5,7 @@
       <root url="jar://$PROJECT_DIR$/lib/javax.transaction.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.resource.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/javax.annotation.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/Libs/javaee-api-6.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/libs/javaee-api-6.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
