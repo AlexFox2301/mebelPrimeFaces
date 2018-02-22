@@ -2,11 +2,14 @@ package beans;
 
 
 import DAO.EmployeeDAO;
+import org.primefaces.model.UploadedFile;
 import tables.Employee;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
@@ -85,9 +88,26 @@ public class EmployeeBean implements Serializable{
         loginSuccess = employeeDAO.checkPassword(login, password);
     }
 
-    public void search(){}//липовая заглушка
+        public void search(){}//липовая заглушка
 
     public void deleted(){}//липовая заглушка
+
+    private UploadedFile file;
+
+    public UploadedFile getFile() {
+        return file;
+    }
+
+    public void setFile(UploadedFile file) {
+        this.file = file;
+    }
+
+    public void upload() {
+        if(file != null) {
+            FacesMessage message = new FacesMessage("Succesful", file.getFileName() + " is uploaded.");
+            FacesContext.getCurrentInstance().addMessage(null, message);
+        }
+    }
 
 
 

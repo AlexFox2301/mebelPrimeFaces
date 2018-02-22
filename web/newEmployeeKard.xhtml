@@ -1,80 +1,65 @@
-<html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<head>
-    <meta charset="utf-8">
+<h:head>
     <title>New Employee Kard</title>
-    <link rel="icon" href="galereya/drel-drawing.png">
-    <link rel="stylesheet" href="resources/css/style.css">
-</head>
+    <link rel="shortcut icon" type="image/png" href="galereya/drel-drawing.png" />
+    <h:outputStylesheet library="css" name="style.css"/>
+</h:head>
 
-<body class="total">
+<h:body styleClass="total">
 
-    <header>
-        <h2 align="center">ЧП "РИО" </h2>
-        <p align="center" class="footer" width="100%">MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
-    </header>
-    
-    <main>
-        <form>
-            <table width="100%" cellspacing="10" cellpadding="5" border="1" class="table">
-                <tr>
-                    <td rowspan="8" width="30%" align="center"><img src="foto/......img" alt="Фото сотрудника" width="240">
-                    </td>
-                    <td width="20%">ID</td>
-                    <td><input type="text" readonly name="idEmployee" id="input"></td>
-                </tr>
-                <tr>
-                    <td>Фамилия</td>
-                    <td><input type="text" name="lastName" id="input"></td>
-                </tr>
-                <tr>
-                    <td>Имя</td>
-                    <td><input type="text" name="firstName" id="input"></td>
-                </tr>
-                <tr>
-                    <td>Отчество</td>
-                    <td><input type="text" name="fatherName" id="input"></td>
-                </tr>
-                <tr>
-                    <td>Адрес</td>
-                    <td><input type="text" name="homeAdres" id="input"></td>
-                </tr>
-                <tr>
-                    <td>номер телефона</td>
-                    <td><input type="tel" name="phoneNumber" id="input"></td>
-                </tr>
-                <tr>
-                    <td>e-mail</td>
-                    <td><input type="email" name="email" id="input"></td>
-                </tr>
-                <tr>
-                    <td>Должность</td>
-                    <td><input type="text" name="cost" list="cost" id="input"></td>
-                </tr>
-            </table>
-            <input type="submit" class="buttomFind">
-            
-        </form>
-        <a href="employee-.xhtml">
-                <button class="buttomFind">Выйти</button>
-            </a>
+    <h2 align="center">ЧП "РИО" </h2>
+    <p align="center" >MTS: +38066 496-62-93 LIFE: +38093 239-60-30 KievStar:+38067 11-28-98</p>
+    <h1 align="center">Сотрудники</h1>
+
+    <h:form>
+        <p:growl id="messages" showDetail="true" />
+
+    <h:panelGrid columns="3" cellpadding="7">
+
+        <p:column rowspan="7">
+            <p:graphicImage value="Foto" url="galereya/" alt="Add foto"/>
+
+            <p:fileUpload value="#{employeeBean.file}" mode="simple" skinSimple="true"/>
+        </p:column>
+
+        <p:outputLabel value="Last Name" for="lastName" />
+        <p:inputText id="lastName" value="#{employee.lastName}"/>
+
+        <p:outputLabel value="First Name" for="firstName" />
+        <p:inputText id="firstName" value="#{employee.firstName}"/>
+
+        <p:outputLabel value="Father Name" for="fatherName" />
+        <p:inputText id="fathetName" value="#{employee.fatherName}"/>
+
+    </h:panelGrid>
+
+    </h:form>
+
    
 
     
-        <form>
-            
-            <datalist id="cost">
-                <option value="Директор">
-                <option value="Водитель">
-                <option value="Дизайнер">
-                <option value="Технолог">
-                <option value="Агент снабжения">
-                <option value="Сборщик">
-            </datalist>
-           
-        </form>
-    </main>
+        <!--<form>-->
+            <!---->
+            <!--<datalist id="cost">-->
+                <!--<option value="Директор">-->
+                <!--<option value="Водитель">-->
+                <!--<option value="Дизайнер">-->
+                <!--<option value="Технолог">-->
+                <!--<option value="Агент снабжения">-->
+                <!--<option value="Сборщик">-->
+            <!--</datalist>-->
+           <!---->
+        <!--</form>-->
+
 
     
-</body>
+</h:body>
 </html>

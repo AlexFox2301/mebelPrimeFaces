@@ -1,6 +1,5 @@
 package tables;
 
-import javax.faces.bean.ApplicationScoped;
 import javax.persistence.*;
 import java.util.Date;
 
@@ -12,7 +11,11 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Basic
-    private String fullName;            //Фамилия Имя Отчество
+    private String lastName;            //Фамилия Имя Отчество
+    @Basic
+    private String firstName;            //Фамилия Имя Отчество
+    @Basic
+    private String fatherName;            //Фамилия Имя Отчество
     @Basic
     private String position;            //Должность
     @Basic
@@ -34,31 +37,48 @@ public class Employee {
 
     ////////////////////////Конструкторы////////////////////////
 
-    public Employee(String fullName, String position) {
-        this.fullName = fullName;
-        this.position = position;
-    }
-
-    public Employee(String fullName, String position, String address) {
-        this.fullName = fullName;
-        this.position = position;
-        this.address = address;
-    }
-
-    public Employee(String fullName, String position, String address, String phoneNumber) {
-        this.fullName = fullName;
-        this.position = position;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-    }
+//    public Employee(String fatherName, String position) {
+//        this.fatherName = fatherName;
+//        this.position = position;
+//    }
+//
+//    public Employee(String fatherName, String position, String address) {
+//        this.fatherName = fatherName;
+//        this.position = position;
+//        this.address = address;
+//    }
+//
+//    public Employee(String fatherName, String position, String address, String phoneNumber) {
+//        this.fatherName = fatherName;
+//        this.position = position;
+//        this.address = address;
+//        this.phoneNumber = phoneNumber;
+//    }
 
     public Employee() {
     }
 
 //////////////////////////Геттеры / Сеттеры//////////////////////
 
-    public String getFullName() {
-        return fullName;
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getFatherName() {
+        return fatherName;
     }
 
     public String getPosition() {
@@ -73,8 +93,8 @@ public class Employee {
         return phoneNumber;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setFatherName(String fullName) {
+        this.fatherName = fullName;
     }
 
     public void setPosition(String position) {

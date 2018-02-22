@@ -47,7 +47,7 @@
                     </p:column>
 
                     <p:column headerText="Full Name">
-                        <h:outputText value="#{employee.fullName}"/>
+                        <h:outputText value="#{employee.lastName + employee.firstName + employee.fatherName}"/>
                     </p:column>
 
                     <p:column headerText="Position">
