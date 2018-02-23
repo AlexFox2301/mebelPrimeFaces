@@ -38,6 +38,8 @@ public class EmployeeBean implements Serializable{
 
     private String searchText;
 
+    private UploadedFile file;
+
 //    private List<Employee> filteredEmployees;
 
     /////////////Геттеры / Сеттеры /////////////////////////////////////////
@@ -82,6 +84,13 @@ public class EmployeeBean implements Serializable{
         this.searchText = searchText;
     }
 
+    public UploadedFile getFile() {
+        return file;
+    }
+
+    public void setFile(UploadedFile file) {
+        this.file = file;
+    }
     ///////////////Методы//////////////////////////////////////////////////
 
     public void checkPassword(){
@@ -91,16 +100,6 @@ public class EmployeeBean implements Serializable{
         public void search(){}//липовая заглушка
 
     public void deleted(){}//липовая заглушка
-
-    private UploadedFile file;
-
-    public UploadedFile getFile() {
-        return file;
-    }
-
-    public void setFile(UploadedFile file) {
-        this.file = file;
-    }
 
     public void upload() {
         if(file != null) {
